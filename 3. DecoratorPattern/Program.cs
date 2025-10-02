@@ -154,7 +154,6 @@ namespace DecoratorPattern
             IrishCoffee = new Cond.Whiskey(IrishCoffee);
             IrishCoffee = new Cond.Whip(IrishCoffee);
             PrintBeverage(IrishCoffee);
-
         }
 
 
