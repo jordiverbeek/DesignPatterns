@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FactoryPattern.Interfaces.Factories;
 
-namespace DecoratorPattern.Beverages
+namespace FactoryPattern.Beverages
 {
     enum Size
     {
@@ -12,7 +13,8 @@ namespace DecoratorPattern.Beverages
         GRANDE,
         VENDI
     }
-    internal abstract class Beverage
+    
+    internal abstract class Beverage : BeverageFactory
     {
         public Size Size { get { return size; } set { size = value; } }
         private Size size;
@@ -20,11 +22,29 @@ namespace DecoratorPattern.Beverages
         protected string description = "Unknown";
         protected Beverage baseBeverage = null;
 
-        
 
         public virtual string GetDescription()
         {
             return description;
+        }
+
+        public void SetSize(string size)
+        {
+            switch (size.ToLower())
+            {
+                case "tall":
+                    this.size = Size.TALL;
+                    break;
+                case "grande":
+                    this.size = Size.GRANDE;
+                    break;
+                case "vendi":
+                    this.size = Size.VENDI;
+                    break;
+                default:
+                    this.size = Size.GRANDE;
+                    break;
+            }
         }
 
         public abstract double cost();

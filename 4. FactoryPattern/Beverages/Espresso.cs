@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern.Beverages
+namespace FactoryPattern.Beverages
 {
     internal class Espresso : Beverage
     {
+        private readonly Double price = 1.99;
+        
         public Espresso(Beverage beverage = null)
         {
             description = "Espresso";
@@ -24,46 +26,28 @@ namespace DecoratorPattern.Beverages
         }
         public override double cost()
         {
-            double price = 1.99;
-            switch (this.Size)
+            double sizeCost = 0;
+            switch (Size)
             {
                 case Size.TALL:
-                    price = price - 0.055;
+                    sizeCost = 0.50;
                     break;
-
                 case Size.GRANDE:
-                    price = price + 0.0;
+                    sizeCost = 1.00;
                     break;
-
                 case Size.VENDI:
-                    price = price + 0.15;
+                    sizeCost = 1.50;
                     break;
-
                 default:
+                    sizeCost = 1.00;
                     break;
             }
+
             if (baseBeverage != null)
             {
-                switch (this.Size)
-                {
-                    case Size.TALL:
-                        price = price - 0.05;
-                        break;
-
-                    case Size.GRANDE:
-                        price = price + 0;
-                        break;
-
-                    case Size.VENDI:
-                        price = price + 0.15;
-                        break;
-
-                    default:
-                        break;
-                }
-
+                return price + sizeCost + baseBeverage.cost();
             }
-            return price;
+            return price + sizeCost;
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿using DecoratorPattern.Beverages;
+﻿using FactoryPattern.Beverages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern.Condiments
+namespace FactoryPattern.Condiments
 {
     internal class Lemon : CondimentDecorator
     {
@@ -16,21 +16,7 @@ namespace DecoratorPattern.Condiments
 
         public override double cost()
         {
-            switch (this.Size)
-            {
-                case Size.TALL:
-                    return baseBeverage.cost() - 0.05;
-
-                case Size.GRANDE:
-                    return baseBeverage.cost() + 0;
-
-                case Size.VENDI:
-                    return baseBeverage.cost() + 0.15;
-
-                default:
-                    break;
-            }
-            return 0.15 + baseBeverage.cost();
+            return 0.10 + baseBeverage.cost();
         }
 
         public override string GetDescription()

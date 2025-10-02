@@ -24,7 +24,7 @@ namespace Singleton
             if (instance == null)
             {
                 lock (lockObject)
-                {
+                {   
                     if (instance == null)
                     {
                         instance = new ChocolateBoiler();

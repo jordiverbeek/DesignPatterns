@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.Condiments
 {
-    internal class Whip : CondimentDecorator
+    internal class Chocolate : CondimentDecorator
     {
-        public Whip(Beverage beverage)
+        public Chocolate(Beverage beverage)
         {
             this.baseBeverage = beverage;
         }
@@ -21,7 +21,7 @@ namespace FactoryPattern.Condiments
 
         public override string GetDescription()
         {
-            return baseBeverage.GetDescription() + ", Whip";
+            return baseBeverage.GetDescription() + ", Chocolate";
         }
     }
 }

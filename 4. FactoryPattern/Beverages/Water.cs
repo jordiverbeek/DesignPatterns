@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.Beverages
 {
-    internal class Chocolate : Beverage
+    internal class Water : Beverage
     {
-        private readonly Double price = 1.50;
+        private readonly Double price = 0.50;
 
-        public Chocolate(Beverage beverage = null)
+        public Water(Beverage beverage = null)
         {
-            description = "Chocolate";
+            description = "Water";
             this.baseBeverage = beverage;
 
         }

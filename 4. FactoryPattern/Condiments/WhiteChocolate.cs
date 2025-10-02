@@ -1,11 +1,12 @@
-﻿using DecoratorPattern.Beverages;
+﻿using FactoryPattern.Beverages;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern.Condiments
+namespace FactoryPattern.Condiments
 {
     internal class WhiteChocolate : CondimentDecorator
     {
@@ -16,27 +17,12 @@ namespace DecoratorPattern.Condiments
 
         public override double cost()
         {
-            switch (this.Size)
-            {
-                case Size.TALL:
-                    return baseBeverage.cost() - 0.1;
-
-                case Size.GRANDE:
-                    return baseBeverage.cost() + 0;
-
-                case Size.VENDI:
-                    return baseBeverage.cost() + 0.1;
-
-                default:
-                    break;
-            }
-
-            return 0.20 + baseBeverage.cost();
+            return 0.10 + baseBeverage.cost();
         }
 
         public override string GetDescription()
         {
-            return baseBeverage.GetDescription() + ", WhiteChocolate";
+            return baseBeverage.GetDescription() + ", White Chocolate";
         }
     }
 }
