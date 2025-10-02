@@ -16,7 +16,7 @@ namespace FactoryPattern.Stores
             Beverage beverage = factory.CreateBeverage(type);
             beverage.SetSize(size);
 
-            Console.WriteLine(beverage.GetDescription() + " €" +  beverage.cost().ToString("#.##"));
+            Console.WriteLine(beverage.GetDescription() + " " +  beverage.cost().ToString("#.##"));
 
             return beverage;
         }
