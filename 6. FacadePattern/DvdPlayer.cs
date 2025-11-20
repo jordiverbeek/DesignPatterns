@@ -11,40 +11,40 @@ namespace FacadePattern
         private Amplifier _amplifier;
         public DvdPlayer(Amplifier amplifier)
         {
-            _amplifier = amplifier;
+            this._amplifier = amplifier;
         }
 
         public void On()
         {
-            Console.WriteLine("DVD player aan");
+            Console.WriteLine("Dvd Player on");
         }
         public void Off()
         {
-            Console.WriteLine("DVD player uit");
+            Console.WriteLine("Dvd Player off");
         }
         public void Eject()
         {
-            Console.WriteLine("DVD player eject");
+            Console.WriteLine("Dvd Player eject");
         }
         public void Pause()
         {
-            Console.WriteLine("DVD player pause");
+            Console.WriteLine("Dvd Player pause");
         }
         public void Play(string movie)
         {
-            Console.WriteLine("DVD player play");
+            Console.WriteLine("Dvd Player playing \"" + movie + "\"");
         }
         public void SetSurroundAudio()
         {
-
+            Console.WriteLine("Dvd Player set surround audio");
         }
         public void SetTWoChannelAudio()
         {
-
+            Console.WriteLine("Dvd Player set two channel audio");
         }
         public void Stop()
         {
-            Console.WriteLine("DVD player stop");
+            Console.WriteLine("Dvd Player stop");
         }
     }
 }

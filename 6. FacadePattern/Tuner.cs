@@ -16,27 +16,27 @@ namespace FacadePattern
 
         public void On()
         {
-            Console.WriteLine("Tuner aan");
+            Console.WriteLine("Tuner on");
         }
 
         public void Off()
         {
-            Console.WriteLine("Tuner uit");
+            Console.WriteLine("Tuner off");
         }
 
         public void setAM()
         {
-
+            Console.WriteLine("Tuner setting AM");
         }
 
         public void setFM()
         {
-
+            Console.WriteLine("Tuner setting FM");
         }
 
         public void setFrequency()
         {
-
+            Console.WriteLine("Tuner setting frequency");
         }
 
     }

@@ -10,17 +10,17 @@ namespace FacadePattern
     {
         public void On()
         {
-            Console.WriteLine("Theater Lights aan");
+            Console.WriteLine("Theater Ceiling Lights are On");
         }
 
         public void Off()
         {
-            Console.WriteLine("Theater Lights uit");
+            Console.WriteLine("Theater Ceiling Lights are Off");
         }
 
         public void Dim(int value)
         {
-
+            Console.WriteLine($"Theater Ceiling Lights dimming to {value}%");
         }
     }
 }

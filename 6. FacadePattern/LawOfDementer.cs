@@ -43,4 +43,4 @@ namespace FacadePattern
             ComposedComponent.doSomething();
         }
     }
-}   
+}

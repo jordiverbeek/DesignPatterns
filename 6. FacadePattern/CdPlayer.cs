@@ -11,32 +11,32 @@ namespace FacadePattern
         private Amplifier _amplifier;
         public CdPlayer(Amplifier amplifier)
         {
-            _amplifier = amplifier;
+            this._amplifier = amplifier;
         }
 
         public void On()
         {
-            Console.WriteLine("CD player aan");
+            Console.WriteLine("Cd Player on");
         }
         public void Off()
         {
-            Console.WriteLine("CD player uit");
+            Console.WriteLine("Cd Player off");
         }
         public void Eject()
         {
-            Console.WriteLine("CD player eject");
+            Console.WriteLine("Cd Player eject");
         }
         public void Pause()
         {
-            Console.WriteLine("CD player pause");
+            Console.WriteLine("Cd Player pause");
         }
         public void Play()
         {
-            Console.WriteLine("CD player play");
+            Console.WriteLine("Cd Player playing");
         }
         public void Stop()
         {
-            Console.WriteLine("CD player stop");
+            Console.WriteLine("Cd Player stop");
         }
     }
 }

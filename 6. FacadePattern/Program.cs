@@ -13,18 +13,12 @@
             TheaterLights lights = new TheaterLights();
             Tuner tuner = new Tuner(amp);
 
+            HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, tuner, dvdPlayer, cdPlayer, projector, lights, screen, popcornPopper);
 
-            var homeTheater = new HomeTheaterFacade(popcornPopper, lights, screen, projector, amp, dvdPlayer);
 
-            homeTheater.WatchMovie();
-
-            Console.WriteLine("Film gestart!");
-
-            Console.WriteLine("--------------------------");
-
+            homeTheater.WatchMovie("Inception");
+            Console.WriteLine("\n--- Movie Einded ---\n");
             homeTheater.EndMovie();
-
-            Console.WriteLine("Film gestopt!");
         }
     }
 }
